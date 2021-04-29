@@ -1,0 +1,6 @@
+C:\Users\USER\source\repos\GestorArticulosComerciales\Dominio\bin\Debug\Dominio.dll
+C:\Users\USER\source\repos\GestorArticulosComerciales\Dominio\bin\Debug\Dominio.pdb
+C:\Users\USER\source\repos\GestorArticulosComerciales\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\GestorArticulosComerciales\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\GestorArticulosComerciales\Dominio\obj\Debug\Dominio.dll
+C:\Users\USER\source\repos\GestorArticulosComerciales\Dominio\obj\Debug\Dominio.pdb

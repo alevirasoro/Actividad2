@@ -1,0 +1,9 @@
+C:\Users\USER\source\repos\GestorArticulosComerciales\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\GestorArticulosComerciales\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\GestorArticulosComerciales\Negocio\bin\Debug\Negocio.dll
+C:\Users\USER\source\repos\GestorArticulosComerciales\Negocio\bin\Debug\Negocio.pdb
+C:\Users\USER\source\repos\GestorArticulosComerciales\Negocio\bin\Debug\Dominio.dll
+C:\Users\USER\source\repos\GestorArticulosComerciales\Negocio\bin\Debug\Dominio.pdb
+C:\Users\USER\source\repos\GestorArticulosComerciales\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\USER\source\repos\GestorArticulosComerciales\Negocio\obj\Debug\Negocio.dll
+C:\Users\USER\source\repos\GestorArticulosComerciales\Negocio\obj\Debug\Negocio.pdb
