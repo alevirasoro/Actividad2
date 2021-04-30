@@ -15,7 +15,7 @@ namespace Negocio
 
         public AccesoDB()
         {
-            conexion = new SqlConnection("data source= .\\SQLEXPRESS; inital catalog= CATALOGO_DB; integrated security=sspi");
+            conexion = new SqlConnection("data source= .\\SQLEXPRESS; initial catalog= CATALOGO_DB; integrated security=sspi");
             comando = new SqlCommand();
         }
 
@@ -23,7 +23,7 @@ namespace Negocio
         {
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = consulta;
-            comando = null;
+
         }
 
         public void ejecutarLectura()
@@ -45,6 +45,10 @@ namespace Negocio
             comando.Connection = conexion;
             conexion.Open();
             comando.ExecuteNonQuery();
+        }
+        public SqlDataReader Lector
+        {
+            get { return lector; }
         }
     }
 }

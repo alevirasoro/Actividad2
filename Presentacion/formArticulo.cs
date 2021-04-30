@@ -35,20 +35,20 @@ namespace Presentacion
             ArticuloNegocio artNegocio = new ArticuloNegocio();
             try
             {
-                nuevo.CodigoArticulo = int.Parse(txtCodigo.Text);
+                nuevo.CodigoArticulo = txtCodigo.Text;
                 nuevo.Nombre = txtNombre.Text;
                // nuevo.MarcaArticulo = txtMarca.Text;
                // nuevo.CategoriaArticulo = txtCategoria.Text;
                 nuevo.Descripcion = txtDesc.Text;
-                nuevo.Precio = double.Parse(txtPrecio.Text);
+                nuevo.Precio = decimal.Parse(txtPrecio.Text);
                 artNegocio.agregar(nuevo);
                 MessageBox.Show("Articulo agregado a el Catalogo");
                 Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                throw ex;
+                throw;
             }
         }
     

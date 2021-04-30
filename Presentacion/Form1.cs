@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
 using Dominio;
+using System.Data.SqlClient;
 
 namespace Presentacion
 {
@@ -21,26 +22,13 @@ namespace Presentacion
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            try
-            {
-                List<Articulo> listaArticulos = new List<Articulo>();
-                Articulo art = new Articulo();
-                art.CodigoArticulo = 3;
-                art.Descripcion = "Articulo descp";
-                art.Nombre = "Tornillo";
-                art.UrlImagen = "https://cdn.homedepot.com.mx/productos/239166/239166-d.jpg";
 
-                listaArticulos.Add(art);
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            List<Articulo> listaArticulos = new List<Articulo>();
+
+                listaArticulos = articuloNegocio.listar();
                 dgvArticulos.DataSource = listaArticulos;
-                dgvArticulos.Columns["UrlImagen"].Visible = false;
-
-              //  RecargarImagen(listaArticulos[0].UrlImagen);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
+            
         }
         private void RecargarImagen(string img)
         {

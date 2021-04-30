@@ -22,3 +22,9 @@ C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\bin\Debug\net
 C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\bin\Debug\net5.0-windows\Dominio.pdb
 C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\obj\Debug\net5.0-windows\Presentacion.csproj.CopyComplete
 C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\obj\Debug\net5.0-windows\Presentacion.formArticulo.resources
+C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

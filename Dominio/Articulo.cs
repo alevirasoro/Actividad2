@@ -8,13 +8,13 @@ namespace Dominio
 {
     public class Articulo
     {
-        public int CodigoArticulo { get; set; }
+        public string CodigoArticulo { get; set; }
         public string Nombre { get; set; }
         public Marca MarcaArticulo { get; set; }
         public Categoria CategoriaArticulo { get; set; }
         public string Descripcion { get; set; }
         public string UrlImagen { get; set; }
-        public double Precio { get; set; }
+        public decimal Precio { get; set; }
 
     }
 }
