@@ -34,7 +34,7 @@ namespace Presentacion
                 dgvArticulos.DataSource = listaArticulos;
                 dgvArticulos.Columns["UrlImagen"].Visible = false;
 
-                RecargarImagen(listaArticulos[0].UrlImagen);
+              //  RecargarImagen(listaArticulos[0].UrlImagen);
             }
             catch (Exception ex)
             {
@@ -46,6 +46,11 @@ namespace Presentacion
         {
             pbArticulo.Load(img);
         }
-        
+
+        private void bAgregar_Click(object sender, EventArgs e)
+        {
+            formArticulo agregar = new formArticulo();
+            agregar.ShowDialog();
+        }
     }
 }

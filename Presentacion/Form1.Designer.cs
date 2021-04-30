@@ -95,6 +95,7 @@ namespace Presentacion
             this.bAgregar.TabIndex = 5;
             this.bAgregar.Text = "Agregar";
             this.bAgregar.UseVisualStyleBackColor = true;
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
             // bEditar
             // 

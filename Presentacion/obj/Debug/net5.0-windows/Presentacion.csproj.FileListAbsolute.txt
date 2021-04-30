@@ -21,3 +21,4 @@ C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\bin\Debug\net
 C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\bin\Debug\net5.0-windows\Negocio.pdb
 C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\bin\Debug\net5.0-windows\Dominio.pdb
 C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\obj\Debug\net5.0-windows\Presentacion.csproj.CopyComplete
+C:\Users\USER\source\repos\GestorArticulosComerciales\Presentacion\obj\Debug\net5.0-windows\Presentacion.formArticulo.resources

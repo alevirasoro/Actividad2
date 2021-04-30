@@ -40,5 +40,11 @@ namespace Negocio
             conexion.Close();
         }
 
+        internal void ejectutarAccion()
+        {
+            comando.Connection = conexion;
+            conexion.Open();
+            comando.ExecuteNonQuery();
+        }
     }
 }
