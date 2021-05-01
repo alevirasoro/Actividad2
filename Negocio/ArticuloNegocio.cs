@@ -15,8 +15,13 @@ namespace Negocio
             AccesoDB acceso = new AccesoDB();
             try
             {
-                string valores = "values(" + nuevo.CodigoArticulo + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', '" + nuevo.UrlImagen + "','" + nuevo.Precio + "'";
-                acceso.setearConsulta("insert into articulos (Codigo, Nombre, Descripcion, UrlImagen, Precio)" + valores);
+                //ESTO PUEDE O DEBERIA SER EN UNA LINEA,
+                //POR CLARIDAD SE CONCATENA EN 2
+
+                string valores = "values('"+ nuevo.CodigoArticulo + "', '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', '" + nuevo.UrlImagen + "','" + nuevo.Precio + "', 1, 1)";
+                acceso.setearConsulta("insert into articulos (Codigo, Nombre, Descripcion, ImagenUrl, Precio, IdMarca, IdCategoria)" + valores);
+
+                acceso.ejectutarAccion();
                     }
             catch (Exception ex)
             {
@@ -35,13 +40,15 @@ namespace Negocio
 
             try
             {
-                acceso.setearConsulta("select Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio from ARTICULOS A");
+                acceso.setearConsulta("select Codigo, Nombre, A.Descripcion, ImagenUrl, Precio, M.Descripcion Marca, C.Descripcion Categoria from ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca = M.Id and A.IdCategoria = C.Id");
                 acceso.ejecutarLectura();
                 while (acceso.Lector.Read())
                 {
                     Articulo aux = new Articulo();
                     aux.CodigoArticulo = (string)acceso.Lector["Codigo"];
                     aux.Nombre = (string)acceso.Lector["Nombre"];
+                    aux.MarcaArticulo = new Marca((string)acceso.Lector["Marca"]);
+                    aux.CategoriaArticulo = new Categoria((string)acceso.Lector["Categoria"]);
                     aux.Descripcion = (string)acceso.Lector["Descripcion"];
                     aux.UrlImagen = (string)acceso.Lector["ImagenUrl"];
                     aux.Precio = (decimal)acceso.Lector["Precio"];

@@ -10,5 +10,15 @@ namespace Dominio
     {
         public int IdMarca { get; set; }
         public string Nombre { get; set; }
+        public Marca(string nombre)
+        {
+            Nombre = nombre;
+        }
+        public Marca (int id, string nombre)
+        {
+            IdMarca = id;
+            Nombre = nombre;
+        }
+    
     }
 }

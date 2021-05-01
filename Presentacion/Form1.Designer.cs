@@ -32,7 +32,7 @@ namespace Presentacion
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.pbArticulo = new System.Windows.Forms.PictureBox();
             this.lFiltro = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
             this.bBuscar = new System.Windows.Forms.Button();
             this.bAgregar = new System.Windows.Forms.Button();
             this.bEditar = new System.Windows.Forms.Button();
@@ -53,12 +53,13 @@ namespace Presentacion
             this.dgvArticulos.RowTemplate.Height = 25;
             this.dgvArticulos.Size = new System.Drawing.Size(675, 319);
             this.dgvArticulos.TabIndex = 0;
+            this.dgvArticulos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvArticulos_MouseClick);
             // 
             // pbArticulo
             // 
-            this.pbArticulo.Location = new System.Drawing.Point(716, 116);
+            this.pbArticulo.Location = new System.Drawing.Point(716, 71);
             this.pbArticulo.Name = "pbArticulo";
-            this.pbArticulo.Size = new System.Drawing.Size(268, 233);
+            this.pbArticulo.Size = new System.Drawing.Size(268, 313);
             this.pbArticulo.TabIndex = 1;
             this.pbArticulo.TabStop = false;
             // 
@@ -71,12 +72,12 @@ namespace Presentacion
             this.lFiltro.TabIndex = 2;
             this.lFiltro.Text = "Filtros";
             // 
-            // textBox1
+            // txtFiltro
             // 
-            this.textBox1.Location = new System.Drawing.Point(408, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 23);
-            this.textBox1.TabIndex = 3;
+            this.txtFiltro.Location = new System.Drawing.Point(408, 42);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(199, 23);
+            this.txtFiltro.TabIndex = 3;
             // 
             // bBuscar
             // 
@@ -86,6 +87,7 @@ namespace Presentacion
             this.bBuscar.TabIndex = 4;
             this.bBuscar.Text = "Buscar";
             this.bBuscar.UseVisualStyleBackColor = true;
+            this.bBuscar.Click += new System.EventHandler(this.bBuscar_Click);
             // 
             // bAgregar
             // 
@@ -105,6 +107,7 @@ namespace Presentacion
             this.bEditar.TabIndex = 6;
             this.bEditar.Text = "Editar";
             this.bEditar.UseVisualStyleBackColor = true;
+            this.bEditar.Click += new System.EventHandler(this.bEditar_Click);
             // 
             // bDetalle
             // 
@@ -134,7 +137,7 @@ namespace Presentacion
             this.Controls.Add(this.bEditar);
             this.Controls.Add(this.bAgregar);
             this.Controls.Add(this.bBuscar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.lFiltro);
             this.Controls.Add(this.pbArticulo);
             this.Controls.Add(this.dgvArticulos);
@@ -153,7 +156,7 @@ namespace Presentacion
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.PictureBox pbArticulo;
         private System.Windows.Forms.Label lFiltro;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.Button bAgregar;
         private System.Windows.Forms.Button bEditar;

@@ -14,14 +14,39 @@ namespace Presentacion
 {
     public partial class formArticulo : Form
     {
+        private Articulo articulo = null;
         public formArticulo()
         {
             InitializeComponent();
         }
-
+        public formArticulo(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            Text = "Modificar Articulo";
+        }
         private void formArticulo_Load(object sender, EventArgs e)
         {
 
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            try
+            {
+                cboMarca.DataSource = marcaNegocio.listar();
+               // cboMarca.ValueMember;
+                if(articulo != null)
+                {
+                    txtNombre.Text = articulo.Nombre;
+                    txtDesc.Text = articulo.Descripcion;
+                    txtUrl.Text = articulo.UrlImagen;
+                  //  txtPrecio = articulo.Precio;
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void bCancelar_Click(object sender, EventArgs e)
@@ -37,10 +62,12 @@ namespace Presentacion
             {
                 nuevo.CodigoArticulo = txtCodigo.Text;
                 nuevo.Nombre = txtNombre.Text;
-               // nuevo.MarcaArticulo = txtMarca.Text;
                // nuevo.CategoriaArticulo = txtCategoria.Text;
                 nuevo.Descripcion = txtDesc.Text;
                 nuevo.Precio = decimal.Parse(txtPrecio.Text);
+                nuevo.UrlImagen = txtUrl.Text;
+                nuevo.MarcaArticulo = (Marca)cboMarca.SelectedItem;
+
                 artNegocio.agregar(nuevo);
                 MessageBox.Show("Articulo agregado a el Catalogo");
                 Close();

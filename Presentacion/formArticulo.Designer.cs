@@ -33,11 +33,8 @@ namespace Presentacion
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMarca = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtDesc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,6 +42,11 @@ namespace Presentacion
             this.label7 = new System.Windows.Forms.Label();
             this.bAceptar = new System.Windows.Forms.Button();
             this.bCancelar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.cboMarca = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -80,13 +82,6 @@ namespace Presentacion
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre";
             // 
-            // txtMarca
-            // 
-            this.txtMarca.Location = new System.Drawing.Point(82, 77);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(129, 23);
-            this.txtMarca.TabIndex = 5;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -96,13 +91,6 @@ namespace Presentacion
             this.label3.TabIndex = 4;
             this.label3.Text = "Marca";
             // 
-            // txtCategoria
-            // 
-            this.txtCategoria.Location = new System.Drawing.Point(82, 112);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(129, 23);
-            this.txtCategoria.TabIndex = 7;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -111,13 +99,6 @@ namespace Presentacion
             this.label4.Size = new System.Drawing.Size(58, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "Categoria";
-            // 
-            // txtDesc
-            // 
-            this.txtDesc.Location = new System.Drawing.Point(82, 149);
-            this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(129, 23);
-            this.txtDesc.TabIndex = 9;
             // 
             // label5
             // 
@@ -138,7 +119,7 @@ namespace Presentacion
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 190);
+            this.label6.Location = new System.Drawing.Point(13, 190);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 15);
             this.label6.TabIndex = 10;
@@ -162,7 +143,7 @@ namespace Presentacion
             // 
             // bAceptar
             // 
-            this.bAceptar.Location = new System.Drawing.Point(55, 283);
+            this.bAceptar.Location = new System.Drawing.Point(33, 268);
             this.bAceptar.Name = "bAceptar";
             this.bAceptar.Size = new System.Drawing.Size(75, 23);
             this.bAceptar.TabIndex = 14;
@@ -172,7 +153,7 @@ namespace Presentacion
             // 
             // bCancelar
             // 
-            this.bCancelar.Location = new System.Drawing.Point(136, 283);
+            this.bCancelar.Location = new System.Drawing.Point(136, 268);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(75, 23);
             this.bCancelar.TabIndex = 15;
@@ -180,11 +161,45 @@ namespace Presentacion
             this.bCancelar.UseVisualStyleBackColor = true;
             this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(82, 112);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(129, 23);
+            this.comboBox1.TabIndex = 16;
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.Location = new System.Drawing.Point(82, 149);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(129, 23);
+            this.txtDesc.TabIndex = 9;
+            // 
+            // cboMarca
+            // 
+            this.cboMarca.FormattingEnabled = true;
+            this.cboMarca.Location = new System.Drawing.Point(82, 77);
+            this.cboMarca.Name = "cboMarca";
+            this.cboMarca.Size = new System.Drawing.Size(129, 23);
+            this.cboMarca.TabIndex = 17;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(235, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(245, 232);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // formArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 318);
+            this.ClientSize = new System.Drawing.Size(497, 301);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.cboMarca);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.bCancelar);
             this.Controls.Add(this.bAceptar);
             this.Controls.Add(this.txtUrl);
@@ -193,17 +208,16 @@ namespace Presentacion
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label1);
             this.Name = "formArticulo";
-            this.Text = "Form2";
+            this.Text = "Agregar Articulo";
             this.Load += new System.EventHandler(this.formArticulo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,11 +229,8 @@ namespace Presentacion
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label6;
@@ -227,5 +238,9 @@ namespace Presentacion
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button bAceptar;
         private System.Windows.Forms.Button bCancelar;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.ComboBox cboMarca;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
