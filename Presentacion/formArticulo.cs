@@ -44,7 +44,7 @@ namespace Presentacion
                     txtDesc.Text = articulo.Descripcion;
                     txtUrl.Text = articulo.UrlImagen;
                     
-                  //  txtPrecio = articulo.Precio;
+                    txtPrecio.Text = articulo.Precio.ToString();
 
                 }
             }
@@ -62,26 +62,96 @@ namespace Presentacion
 
         private void bAceptar_Click(object sender, EventArgs e)
         {
-            Articulo nuevo = new Articulo();
-            ArticuloNegocio artNegocio = new ArticuloNegocio();
-            nuevo.CodigoArticulo = txtCodigo.Text;
-            nuevo.Nombre = txtNombre.Text;
+            bool es_nuevo = articulo == null;
+
+            if (es_nuevo)
+            {
+                // El artículo no existía antes: crear el objeto
+                articulo = new Articulo();
+            }
+
+            if (txtCodigo.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un código de artículo.");
+            }
+            else
+            {
+                articulo.CodigoArticulo = txtCodigo.Text;
+            }
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("El artículo precisa de un nombre.");
+                return;
+            }
+            else
+            {
+                articulo.Nombre = txtNombre.Text;
+            }
             // nuevo.CategoriaArticulo = txtCategoria.Text;
-            nuevo.Descripcion = txtDesc.Text;
-            nuevo.Precio = decimal.Parse(txtPrecio.Text);
-            nuevo.UrlImagen = txtUrl.Text;
-            nuevo.MarcaArticulo = (Marca)cboMarca.SelectedItem;
+            if (txtDesc.Text == "")
+            {
+                MessageBox.Show("Se necesita una descripción para el artículo.");
+                return;
+            }
+            else
+            {
+                articulo.Descripcion = txtDesc.Text;
+            }
             try
             {
-                artNegocio.agregar(nuevo);
-                MessageBox.Show("Articulo agregado al Catalogo");
+                articulo.Precio = decimal.Parse(txtPrecio.Text);
             }
-            catch (Exception)
+            catch
             {
+                MessageBox.Show("El valor seleccionado como precio no es un número válido.");
+                return;
+            }
+            if (txtUrl.Text == "")
+            {
+                MessageBox.Show("Se debe indicar una imagen de Internet.");
+                return;
+            }
+            else
+            {
+                articulo.UrlImagen = txtUrl.Text;
+            }
 
-                throw;
+            articulo.MarcaArticulo = (Marca)cboMarca.SelectedItem;
+
+            ArticuloNegocio artNegocio = new ArticuloNegocio();
+
+            if (es_nuevo)
+            {
+                try
+                {
+                    artNegocio.agregar(articulo);
+                    MessageBox.Show("Fue agregado el artículo al Catálogo.");
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    Close();
+                }
+            }
+            else
+            {
+                try
+                {
+                    artNegocio.editar(articulo);
+                    MessageBox.Show("Se ha modificado el artículo en el Catálogo.");
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    Close();
+                }
             }
         }
-    
     }
 }

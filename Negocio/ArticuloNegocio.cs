@@ -19,13 +19,47 @@ namespace Negocio
                 //POR CLARIDAD SE CONCATENA EN 2
 
                 string valores = "values('"+ nuevo.CodigoArticulo + "', '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', '" + nuevo.UrlImagen + "','" + nuevo.Precio + "', 1, 1)";
-                acceso.setearConsulta("insert into articulos (Codigo, Nombre, Descripcion, ImagenUrl, Precio, IdMarca, IdCategoria)" + valores);
+                acceso.setearConsulta("insert into articulos (Codigo, Nombre, Descripcion, ImagenUrl, Precio, IdMarca, IdCategoria) " + valores);
 
                 acceso.ejecutarAccion();
             }
             catch (Exception ex)
             {
 
+                throw ex;
+            }
+            finally
+            {
+                acceso.cerrarConexion();
+            }
+        }
+
+        public void editar(Articulo articulo)
+        {
+            AccesoDB acceso = new AccesoDB();
+
+            try
+            {
+                acceso.setearConsulta("update articulos set " +
+                    "Nombre = '" +
+                    articulo.Nombre +
+                    "', Descripcion = '" +
+                    articulo.Descripcion +
+                    "', ImagenUrl = '" +
+                    articulo.UrlImagen +
+                    "', Precio = " +
+                    articulo.Precio.ToString() +
+                    ", IdMarca = '" +
+                    articulo.MarcaArticulo +
+                    "', IdCategoria = '" +
+                    articulo.CategoriaArticulo +
+                    " where Codigo = '" +
+                    articulo.CodigoArticulo + "';");
+
+                acceso.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
                 throw ex;
             }
             finally
