@@ -27,20 +27,9 @@ namespace Presentacion
         {
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
 
-            try
-            {
-                listaArticulos = articuloNegocio.listar();
-                dgvArticulos.DataSource = listaArticulos;
-                //dgvArticulos.Columns["UrlImagen"].Visible = false;
-                //dgvArticulos.Columns["Categoria"].Visible = false;
-
-                RecargarImagen(listaArticulos[0].UrlImagen);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
+            listaArticulos = articuloNegocio.listar();
+            dgvArticulos.DataSource = listaArticulos;
+            RecargarImagen(listaArticulos[0].UrlImagen);
         }
         private void RecargarImagen(string img)
         {
@@ -48,9 +37,16 @@ namespace Presentacion
             {
                 pbArticulo.Load(img);
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString());
+                try
+                {
+                    pbArticulo.Load("404.png");
+                }
+                catch (Exception ex2)
+                {
+                    throw ex2;
+                }
             }
         }
 

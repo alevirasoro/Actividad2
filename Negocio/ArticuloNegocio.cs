@@ -15,9 +15,6 @@ namespace Negocio
             AccesoDB acceso = new AccesoDB();
             try
             {
-                //ESTO PUEDE O DEBERIA SER EN UNA LINEA,
-                //POR CLARIDAD SE CONCATENA EN 2
-
                 string valores = "values('"+ nuevo.CodigoArticulo + "', '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', '" + nuevo.UrlImagen + "','" + nuevo.Precio + "', 1, 1)";
                 acceso.setearConsulta("insert into articulos (Codigo, Nombre, Descripcion, ImagenUrl, Precio, IdMarca, IdCategoria) " + valores);
 
@@ -49,7 +46,7 @@ namespace Negocio
                     articulo.UrlImagen +
                     "', Precio = " +
                     articulo.Precio.ToString() +
-                    //", IdMarca = " +
+                    //", IdMarca = (select ID from MARCAS where " +
                     //articulo.MarcaArticulo +
                     //", IdCategoria = '" +
                     //articulo.CategoriaArticulo +
@@ -67,7 +64,7 @@ namespace Negocio
                 acceso.cerrarConexion();
             }
         }
-        public List<Articulo> listar() 
+        public List<Articulo> listar()
         {
             AccesoDB acceso = new AccesoDB();
             List<Articulo> lista = new List<Articulo>();
@@ -85,6 +82,7 @@ namespace Negocio
                     "on A.IdCategoria = C.Id");
 
                 acceso.ejecutarLectura();
+
                 while (acceso.Lector.Read())
                 {
                     Articulo aux = new Articulo();

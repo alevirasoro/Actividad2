@@ -88,7 +88,17 @@ namespace Presentacion
             {
                 articulo.Nombre = txtNombre.Text;
             }
-            // nuevo.CategoriaArticulo = txtCategoria.Text;
+            /*
+            if (comboBox1.Text == "")
+            {
+                MessageBox.Show("Elegir la categoría del artículo.");
+                return;
+            }
+            else
+            {
+                articulo.CategoriaArticulo = comboBox1.Text;
+            }
+            */
             if (txtDesc.Text == "")
             {
                 MessageBox.Show("Se necesita una descripción para el artículo.");
@@ -117,7 +127,17 @@ namespace Presentacion
                 articulo.UrlImagen = txtUrl.Text;
             }
 
-            articulo.MarcaArticulo = (Marca)cboMarca.SelectedItem;
+            //MarcaNegocio marcaNegocio = new MarcaNegocio();
+
+            //articulo.MarcaArticulo = marcaNegocio.DesdeNombre(
+            //    cboMarca.SelectedIndex.ToString());
+
+            /*if (articulo.MarcaArticulo == "")
+            {
+                MessageBox.Show("Seleccione una marca de la lista desplegable.");
+                return;
+            }
+            */
 
             ArticuloNegocio artNegocio = new ArticuloNegocio();
 

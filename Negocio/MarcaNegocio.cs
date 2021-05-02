@@ -9,6 +9,21 @@ namespace Negocio
 {
       public class MarcaNegocio
       {
+        public Marca DesdeID(int ID)
+        {
+            AccesoDB acceso = new AccesoDB();
+            acceso.setearConsulta(
+                "select descripcion from MARCAS where id = '" +
+                ID + "';");
+            acceso.ejecutarLectura();
+            Marca marca = new Marca();
+            marca.IdMarca = ID;
+            acceso.Lector.Read();
+            marca.Nombre = (string)acceso.Lector["Descripcion"];
+            acceso.cerrarConexion();
+
+            return marca;
+        }
         public List<Marca> listar()
         {
             List<Marca> lista = new List<Marca>();
