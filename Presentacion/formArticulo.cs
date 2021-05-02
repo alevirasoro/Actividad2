@@ -73,6 +73,7 @@ namespace Presentacion
             if (txtCodigo.Text == "")
             {
                 MessageBox.Show("Debe ingresar un código de artículo.");
+                return;
             }
             else
             {
@@ -125,7 +126,7 @@ namespace Presentacion
                 try
                 {
                     artNegocio.agregar(articulo);
-                    MessageBox.Show("Fue agregado el artículo al Catálogo.");
+                    MessageBox.Show("Fue agregado el artículo al catálogo.");
                 }
                 catch (Exception)
                 {
@@ -141,7 +142,7 @@ namespace Presentacion
                 try
                 {
                     artNegocio.editar(articulo);
-                    MessageBox.Show("Se ha modificado el artículo en el Catálogo.");
+                    MessageBox.Show("Se ha modificado el artículo en el catálogo.");
                 }
                 catch (Exception ex)
                 {

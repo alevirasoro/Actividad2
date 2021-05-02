@@ -49,10 +49,10 @@ namespace Negocio
                     articulo.UrlImagen +
                     "', Precio = " +
                     articulo.Precio.ToString() +
-                    ", IdMarca = '" +
-                    articulo.MarcaArticulo +
-                    "', IdCategoria = '" +
-                    articulo.CategoriaArticulo +
+                    //", IdMarca = " +
+                    //articulo.MarcaArticulo +
+                    //", IdCategoria = '" +
+                    //articulo.CategoriaArticulo +
                     " where Codigo = '" +
                     articulo.CodigoArticulo + "';");
 
@@ -78,8 +78,11 @@ namespace Negocio
                     "select A.Codigo Codigo, " +
                     "A.Nombre Nombre, A.Descripcion, A.ImagenUrl, A.Precio, " +
                     "M.Descripcion Marca, C.Descripcion Categoria " +
-                    "from ARTICULOS A, MARCAS M, CATEGORIAS C " +
-                    "Where A.IdMarca = M.Id and A.IdCategoria = C.Id");
+                    "from ARTICULOS A " +
+                    "inner join MARCAS as M " +
+                    "on A.IdMarca = M.Id " +
+                    "inner join CATEGORIAS as C " +
+                    "on A.IdCategoria = C.Id");
 
                 acceso.ejecutarLectura();
                 while (acceso.Lector.Read())
