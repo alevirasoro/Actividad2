@@ -68,15 +68,15 @@ namespace Presentacion
             // lFiltro
             // 
             this.lFiltro.AutoSize = true;
-            this.lFiltro.Location = new System.Drawing.Point(415, 60);
+            this.lFiltro.Location = new System.Drawing.Point(354, 60);
             this.lFiltro.Name = "lFiltro";
-            this.lFiltro.Size = new System.Drawing.Size(49, 20);
+            this.lFiltro.Size = new System.Drawing.Size(106, 20);
             this.lFiltro.TabIndex = 2;
-            this.lFiltro.Text = "Filtros";
+            this.lFiltro.Text = "Filtrar Nombre";
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(466, 56);
+            this.txtFiltro.Location = new System.Drawing.Point(466, 57);
             this.txtFiltro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(320, 27);
@@ -85,7 +85,7 @@ namespace Presentacion
             // 
             // bAgregar
             // 
-            this.bAgregar.Location = new System.Drawing.Point(40, 19);
+            this.bAgregar.Location = new System.Drawing.Point(15, 13);
             this.bAgregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(86, 31);
@@ -96,7 +96,7 @@ namespace Presentacion
             // 
             // bEditar
             // 
-            this.bEditar.Location = new System.Drawing.Point(146, 17);
+            this.bEditar.Location = new System.Drawing.Point(107, 13);
             this.bEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bEditar.Name = "bEditar";
             this.bEditar.Size = new System.Drawing.Size(86, 31);
@@ -107,7 +107,7 @@ namespace Presentacion
             // 
             // bDetalle
             // 
-            this.bDetalle.Location = new System.Drawing.Point(40, 57);
+            this.bDetalle.Location = new System.Drawing.Point(15, 52);
             this.bDetalle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bDetalle.Name = "bDetalle";
             this.bDetalle.Size = new System.Drawing.Size(86, 31);
@@ -117,7 +117,7 @@ namespace Presentacion
             // 
             // bEliminar
             // 
-            this.bEliminar.Location = new System.Drawing.Point(146, 56);
+            this.bEliminar.Location = new System.Drawing.Point(107, 52);
             this.bEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bEliminar.Name = "bEliminar";
             this.bEliminar.Size = new System.Drawing.Size(86, 31);
