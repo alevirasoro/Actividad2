@@ -15,7 +15,7 @@ namespace Negocio
 
         public AccesoDB()
         {
-            conexion = new SqlConnection("data source= .\\SQLEXPRESS; initial catalog= CATALOGO_DB; integrated security=sspi");
+            conexion = new SqlConnection("data source=localhost; initial catalog= CATALOGO_DB; integrated security=sspi");
             comando = new SqlCommand();
         }
 
@@ -40,7 +40,7 @@ namespace Negocio
             conexion.Close();
         }
 
-        internal void ejectutarAccion()
+        internal void ejecutarAccion()
         {
             comando.Connection = conexion;
             conexion.Open();

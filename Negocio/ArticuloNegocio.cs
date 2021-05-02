@@ -21,8 +21,8 @@ namespace Negocio
                 string valores = "values('"+ nuevo.CodigoArticulo + "', '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', '" + nuevo.UrlImagen + "','" + nuevo.Precio + "', 1, 1)";
                 acceso.setearConsulta("insert into articulos (Codigo, Nombre, Descripcion, ImagenUrl, Precio, IdMarca, IdCategoria)" + valores);
 
-                acceso.ejectutarAccion();
-                    }
+                acceso.ejecutarAccion();
+            }
             catch (Exception ex)
             {
 

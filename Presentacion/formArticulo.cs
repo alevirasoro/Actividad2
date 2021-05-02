@@ -58,19 +58,17 @@ namespace Presentacion
         {
             Articulo nuevo = new Articulo();
             ArticuloNegocio artNegocio = new ArticuloNegocio();
+            nuevo.CodigoArticulo = txtCodigo.Text;
+            nuevo.Nombre = txtNombre.Text;
+            // nuevo.CategoriaArticulo = txtCategoria.Text;
+            nuevo.Descripcion = txtDesc.Text;
+            nuevo.Precio = decimal.Parse(txtPrecio.Text);
+            nuevo.UrlImagen = txtUrl.Text;
+            nuevo.MarcaArticulo = (Marca)cboMarca.SelectedItem;
             try
             {
-                nuevo.CodigoArticulo = txtCodigo.Text;
-                nuevo.Nombre = txtNombre.Text;
-               // nuevo.CategoriaArticulo = txtCategoria.Text;
-                nuevo.Descripcion = txtDesc.Text;
-                nuevo.Precio = decimal.Parse(txtPrecio.Text);
-                nuevo.UrlImagen = txtUrl.Text;
-                nuevo.MarcaArticulo = (Marca)cboMarca.SelectedItem;
-
                 artNegocio.agregar(nuevo);
-                MessageBox.Show("Articulo agregado a el Catalogo");
-                Close();
+                MessageBox.Show("Articulo agregado al Catalogo");
             }
             catch (Exception)
             {

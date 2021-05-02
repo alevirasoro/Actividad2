@@ -67,6 +67,10 @@ namespace Presentacion
         private void bEditar_Click(object sender, EventArgs e)
         {
             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+            if (seleccionado == null)
+                return;
+
             formArticulo editar = new formArticulo(seleccionado);
             editar.ShowDialog();
         }
