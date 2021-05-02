@@ -25,8 +25,11 @@ namespace Presentacion
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            cargarArticulos();
+        }
+        private void cargarArticulos()
+        {
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
-
             listaArticulos = articuloNegocio.listar();
             dgvArticulos.DataSource = listaArticulos;
             RecargarImagen(listaArticulos[0].UrlImagen);
@@ -54,6 +57,7 @@ namespace Presentacion
         {
             formArticulo agregar = new formArticulo();
             agregar.ShowDialog();
+            cargarArticulos();
         }
 
         private void dgvArticulos_MouseClick(object sender, MouseEventArgs e)
@@ -71,6 +75,7 @@ namespace Presentacion
 
             formArticulo editar = new formArticulo(seleccionado);
             editar.ShowDialog();
+            cargarArticulos();
         }
 
         private void txtFiltro_TextChanged(object sender, EventArgs e)
@@ -91,6 +96,23 @@ namespace Presentacion
             {
                 dgvArticulos.DataSource = null;
                 dgvArticulos.DataSource = listaArticulos;
+            }
+        }
+
+        private void bEliminar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            DialogResult dialogResult = MessageBox.Show(
+                "¿Desea eliminar el registro " +
+                seleccionado.CodigoArticulo + " (\"" +
+                seleccionado.Descripcion + "\")?",
+                "Eliminar artículo",
+                MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+                articuloNegocio.eliminar(seleccionado);
+                cargarArticulos();
             }
         }
     }

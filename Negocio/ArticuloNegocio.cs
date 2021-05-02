@@ -30,7 +30,25 @@ namespace Negocio
                 acceso.cerrarConexion();
             }
         }
-
+        public void eliminar(Articulo articulo)
+        {
+            AccesoDB acceso = new AccesoDB();
+            try
+            {
+                acceso.setearConsulta(
+                    "delete from articulos where codigo = '" +
+                    articulo.CodigoArticulo + "';");
+                acceso.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                acceso.cerrarConexion();
+            }
+        }
         public void editar(Articulo articulo)
         {
             AccesoDB acceso = new AccesoDB();

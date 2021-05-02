@@ -140,7 +140,7 @@ namespace Presentacion
                 try
                 {
                     artNegocio.agregar(articulo);
-                    MessageBox.Show("Fue agregado el artículo al catálogo.");
+                    MessageBox.Show("Se ha agregado el artículo al catálogo.");
                 }
                 catch (Exception)
                 {
