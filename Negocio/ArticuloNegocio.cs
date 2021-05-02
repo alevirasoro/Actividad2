@@ -40,18 +40,24 @@ namespace Negocio
 
             try
             {
-                acceso.setearConsulta("select Codigo, Nombre, A.Descripcion, ImagenUrl, Precio, M.Descripcion Marca, C.Descripcion Categoria from ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca = M.Id and A.IdCategoria = C.Id");
+                acceso.setearConsulta(
+                    "select A.Codigo Codigo, " +
+                    "A.Nombre Nombre, A.Descripcion, A.ImagenUrl, A.Precio, " +
+                    "M.Descripcion Marca, C.Descripcion Categoria " +
+                    "from ARTICULOS A, MARCAS M, CATEGORIAS C " +
+                    "Where A.IdMarca = M.Id and A.IdCategoria = C.Id");
+
                 acceso.ejecutarLectura();
                 while (acceso.Lector.Read())
                 {
                     Articulo aux = new Articulo();
                     aux.CodigoArticulo = (string)acceso.Lector["Codigo"];
                     aux.Nombre = (string)acceso.Lector["Nombre"];
-                    aux.MarcaArticulo = new Marca((string)acceso.Lector["Marca"]);
-                    aux.CategoriaArticulo = new Categoria((string)acceso.Lector["Categoria"]);
                     aux.Descripcion = (string)acceso.Lector["Descripcion"];
                     aux.UrlImagen = (string)acceso.Lector["ImagenUrl"];
                     aux.Precio = (decimal)acceso.Lector["Precio"];
+                    aux.MarcaArticulo = new Marca((string)acceso.Lector["Marca"]);
+                    aux.CategoriaArticulo = new Categoria((string)acceso.Lector["Categoria"]);
                     lista.Add(aux);
                 }
                 return lista;

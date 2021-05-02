@@ -52,34 +52,34 @@ namespace Presentacion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 17);
+            this.label1.Location = new System.Drawing.Point(17, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 20);
+            this.label1.Size = new System.Drawing.Size(66, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cód. Art.";
             // 
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(94, 13);
+            this.txtCodigo.Location = new System.Drawing.Point(133, 13);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodigo.MaxLength = 30;
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(147, 27);
+            this.txtCodigo.Size = new System.Drawing.Size(212, 27);
             this.txtCodigo.TabIndex = 1;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(94, 60);
+            this.txtNombre.Location = new System.Drawing.Point(133, 48);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(147, 27);
+            this.txtNombre.Size = new System.Drawing.Size(212, 27);
             this.txtNombre.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 64);
+            this.label2.Location = new System.Drawing.Point(17, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 20);
             this.label2.TabIndex = 2;
@@ -88,7 +88,7 @@ namespace Presentacion
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 107);
+            this.label3.Location = new System.Drawing.Point(17, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 20);
             this.label3.TabIndex = 4;
@@ -97,7 +97,7 @@ namespace Presentacion
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 153);
+            this.label4.Location = new System.Drawing.Point(17, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 20);
             this.label4.TabIndex = 6;
@@ -106,7 +106,7 @@ namespace Presentacion
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 203);
+            this.label5.Location = new System.Drawing.Point(17, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 20);
             this.label5.TabIndex = 8;
@@ -114,16 +114,16 @@ namespace Presentacion
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(94, 249);
+            this.txtPrecio.Location = new System.Drawing.Point(133, 190);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(147, 27);
+            this.txtPrecio.Size = new System.Drawing.Size(212, 27);
             this.txtPrecio.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 253);
+            this.label6.Location = new System.Drawing.Point(17, 193);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 20);
             this.label6.TabIndex = 10;
@@ -131,24 +131,24 @@ namespace Presentacion
             // 
             // txtUrl
             // 
-            this.txtUrl.Location = new System.Drawing.Point(94, 303);
+            this.txtUrl.Location = new System.Drawing.Point(133, 225);
             this.txtUrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(147, 27);
+            this.txtUrl.Size = new System.Drawing.Size(212, 27);
             this.txtUrl.TabIndex = 13;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 307);
+            this.label7.Location = new System.Drawing.Point(17, 228);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 20);
+            this.label7.Size = new System.Drawing.Size(110, 20);
             this.label7.TabIndex = 12;
             this.label7.Text = "URL de Imagen";
             // 
             // bAceptar
             // 
-            this.bAceptar.Location = new System.Drawing.Point(38, 357);
+            this.bAceptar.Location = new System.Drawing.Point(106, 260);
             this.bAceptar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bAceptar.Name = "bAceptar";
             this.bAceptar.Size = new System.Drawing.Size(86, 31);
@@ -159,7 +159,7 @@ namespace Presentacion
             // 
             // bCancelar
             // 
-            this.bCancelar.Location = new System.Drawing.Point(155, 357);
+            this.bCancelar.Location = new System.Drawing.Point(198, 260);
             this.bCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(86, 31);
@@ -171,35 +171,35 @@ namespace Presentacion
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(94, 149);
+            this.comboBox1.Location = new System.Drawing.Point(133, 119);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(147, 28);
+            this.comboBox1.Size = new System.Drawing.Size(212, 28);
             this.comboBox1.TabIndex = 16;
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(94, 199);
+            this.txtDesc.Location = new System.Drawing.Point(133, 155);
             this.txtDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(147, 27);
+            this.txtDesc.Size = new System.Drawing.Size(212, 27);
             this.txtDesc.TabIndex = 9;
             // 
             // cboMarca
             // 
             this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(94, 103);
+            this.cboMarca.Location = new System.Drawing.Point(133, 83);
             this.cboMarca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboMarca.Name = "cboMarca";
-            this.cboMarca.Size = new System.Drawing.Size(147, 28);
+            this.cboMarca.Size = new System.Drawing.Size(212, 28);
             this.cboMarca.TabIndex = 17;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(269, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(351, 13);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(280, 309);
+            this.pictureBox1.Size = new System.Drawing.Size(280, 278);
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
@@ -207,7 +207,7 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 401);
+            this.ClientSize = new System.Drawing.Size(643, 304);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cboMarca);
             this.Controls.Add(this.comboBox1);

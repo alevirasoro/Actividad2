@@ -92,6 +92,5 @@ namespace Presentacion
                 dgvArticulos.DataSource = listaArticulos;
             }
         }
-
     }
 }
