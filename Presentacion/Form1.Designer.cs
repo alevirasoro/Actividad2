@@ -1,4 +1,4 @@
-﻿
+
 namespace Presentacion
 {
     partial class Gestor
@@ -33,7 +33,6 @@ namespace Presentacion
             this.pbArticulo = new System.Windows.Forms.PictureBox();
             this.lFiltro = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.bBuscar = new System.Windows.Forms.Button();
             this.bAgregar = new System.Windows.Forms.Button();
             this.bEditar = new System.Windows.Forms.Button();
             this.bDetalle = new System.Windows.Forms.Button();
@@ -47,53 +46,49 @@ namespace Presentacion
             this.dgvArticulos.AllowUserToAddRows = false;
             this.dgvArticulos.AllowUserToDeleteRows = false;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(13, 71);
+            this.dgvArticulos.Location = new System.Drawing.Point(15, 95);
+            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.ReadOnly = true;
+            this.dgvArticulos.RowHeadersWidth = 51;
             this.dgvArticulos.RowTemplate.Height = 25;
-            this.dgvArticulos.Size = new System.Drawing.Size(675, 319);
+            this.dgvArticulos.Size = new System.Drawing.Size(771, 425);
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvArticulos_MouseClick);
             // 
             // pbArticulo
             // 
-            this.pbArticulo.Location = new System.Drawing.Point(716, 71);
+            this.pbArticulo.Location = new System.Drawing.Point(818, 95);
+            this.pbArticulo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbArticulo.Name = "pbArticulo";
-            this.pbArticulo.Size = new System.Drawing.Size(268, 313);
+            this.pbArticulo.Size = new System.Drawing.Size(306, 417);
             this.pbArticulo.TabIndex = 1;
             this.pbArticulo.TabStop = false;
             // 
             // lFiltro
             // 
             this.lFiltro.AutoSize = true;
-            this.lFiltro.Location = new System.Drawing.Point(363, 45);
+            this.lFiltro.Location = new System.Drawing.Point(415, 60);
             this.lFiltro.Name = "lFiltro";
-            this.lFiltro.Size = new System.Drawing.Size(39, 15);
+            this.lFiltro.Size = new System.Drawing.Size(49, 20);
             this.lFiltro.TabIndex = 2;
             this.lFiltro.Text = "Filtros";
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(408, 42);
+            this.txtFiltro.Location = new System.Drawing.Point(466, 56);
+            this.txtFiltro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(199, 23);
+            this.txtFiltro.Size = new System.Drawing.Size(320, 27);
             this.txtFiltro.TabIndex = 3;
-            // 
-            // bBuscar
-            // 
-            this.bBuscar.Location = new System.Drawing.Point(613, 42);
-            this.bBuscar.Name = "bBuscar";
-            this.bBuscar.Size = new System.Drawing.Size(75, 23);
-            this.bBuscar.TabIndex = 4;
-            this.bBuscar.Text = "Buscar";
-            this.bBuscar.UseVisualStyleBackColor = true;
-            this.bBuscar.Click += new System.EventHandler(this.bBuscar_Click);
+            this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
             // bAgregar
             // 
-            this.bAgregar.Location = new System.Drawing.Point(35, 14);
+            this.bAgregar.Location = new System.Drawing.Point(40, 19);
+            this.bAgregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bAgregar.Name = "bAgregar";
-            this.bAgregar.Size = new System.Drawing.Size(75, 23);
+            this.bAgregar.Size = new System.Drawing.Size(86, 31);
             this.bAgregar.TabIndex = 5;
             this.bAgregar.Text = "Agregar";
             this.bAgregar.UseVisualStyleBackColor = true;
@@ -101,9 +96,10 @@ namespace Presentacion
             // 
             // bEditar
             // 
-            this.bEditar.Location = new System.Drawing.Point(128, 13);
+            this.bEditar.Location = new System.Drawing.Point(146, 17);
+            this.bEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bEditar.Name = "bEditar";
-            this.bEditar.Size = new System.Drawing.Size(75, 23);
+            this.bEditar.Size = new System.Drawing.Size(86, 31);
             this.bEditar.TabIndex = 6;
             this.bEditar.Text = "Editar";
             this.bEditar.UseVisualStyleBackColor = true;
@@ -111,36 +107,38 @@ namespace Presentacion
             // 
             // bDetalle
             // 
-            this.bDetalle.Location = new System.Drawing.Point(35, 43);
+            this.bDetalle.Location = new System.Drawing.Point(40, 57);
+            this.bDetalle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bDetalle.Name = "bDetalle";
-            this.bDetalle.Size = new System.Drawing.Size(75, 23);
+            this.bDetalle.Size = new System.Drawing.Size(86, 31);
             this.bDetalle.TabIndex = 7;
             this.bDetalle.Text = "Detalles";
             this.bDetalle.UseVisualStyleBackColor = true;
             // 
             // bEliminar
             // 
-            this.bEliminar.Location = new System.Drawing.Point(128, 42);
+            this.bEliminar.Location = new System.Drawing.Point(146, 56);
+            this.bEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bEliminar.Name = "bEliminar";
-            this.bEliminar.Size = new System.Drawing.Size(75, 23);
+            this.bEliminar.Size = new System.Drawing.Size(86, 31);
             this.bEliminar.TabIndex = 8;
             this.bEliminar.Text = "Eliminar";
             this.bEliminar.UseVisualStyleBackColor = true;
             // 
             // Gestor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1009, 396);
+            this.ClientSize = new System.Drawing.Size(1153, 528);
             this.Controls.Add(this.bEliminar);
             this.Controls.Add(this.bDetalle);
             this.Controls.Add(this.bEditar);
             this.Controls.Add(this.bAgregar);
-            this.Controls.Add(this.bBuscar);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.lFiltro);
             this.Controls.Add(this.pbArticulo);
             this.Controls.Add(this.dgvArticulos);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Gestor";
             this.Text = "Gestor Comercial";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -157,7 +155,6 @@ namespace Presentacion
         private System.Windows.Forms.PictureBox pbArticulo;
         private System.Windows.Forms.Label lFiltro;
         private System.Windows.Forms.TextBox txtFiltro;
-        private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.Button bAgregar;
         private System.Windows.Forms.Button bEditar;
         private System.Windows.Forms.Button bDetalle;
