@@ -67,11 +67,11 @@ namespace Presentacion
             // lFiltro
             // 
             this.lFiltro.AutoSize = true;
-            this.lFiltro.Location = new System.Drawing.Point(548, 16);
+            this.lFiltro.Location = new System.Drawing.Point(607, 16);
             this.lFiltro.Name = "lFiltro";
-            this.lFiltro.Size = new System.Drawing.Size(106, 20);
+            this.lFiltro.Size = new System.Drawing.Size(47, 20);
             this.lFiltro.TabIndex = 2;
-            this.lFiltro.Text = "Filtrar Nombre";
+            this.lFiltro.Text = "Filtrar";
             // 
             // txtFiltro
             // 

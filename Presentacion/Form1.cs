@@ -75,12 +75,15 @@ namespace Presentacion
 
         private void txtFiltro_TextChanged(object sender, EventArgs e)
         {
-            string texto = txtFiltro.Text.ToLower();
+            string texto = txtFiltro.Text.ToUpper();
 
             if (txtFiltro.Text != "")
             {
                 List<Articulo> listaFiltrada = listaArticulos.FindAll(
-                    X => X.Nombre.ToLower().Contains(texto));
+                    X => (
+                        X.Nombre.ToUpper().Contains(texto) ||
+                        X.CodigoArticulo.Contains(texto) ||
+                        X.Descripcion.ToUpper().Contains(texto)));
                 dgvArticulos.DataSource = null;
                 dgvArticulos.DataSource = listaFiltrada;
             }

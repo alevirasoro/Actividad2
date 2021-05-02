@@ -22,6 +22,7 @@ namespace Presentacion
             Text = "Agregar Artículo";
 
             txtCodigo.Enabled = true;
+            txtCodigo.CharacterCasing = CharacterCasing.Upper;
         }
         public formArticulo(Articulo articulo)
         {
@@ -51,7 +52,7 @@ namespace Presentacion
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.ToString(), "Error al cargar los artículos");
             }
         }
 
@@ -72,7 +73,7 @@ namespace Presentacion
 
             if (txtCodigo.Text == "")
             {
-                MessageBox.Show("Debe ingresar un código de artículo.");
+                MessageBox.Show("Debe ingresar un código de artículo.", "Error");
                 return;
             }
             else
@@ -81,7 +82,7 @@ namespace Presentacion
             }
             if (txtNombre.Text == "")
             {
-                MessageBox.Show("El artículo precisa de un nombre.");
+                MessageBox.Show("El artículo precisa de un nombre.", "Error");
                 return;
             }
             else
@@ -91,7 +92,7 @@ namespace Presentacion
             /*
             if (comboBox1.Text == "")
             {
-                MessageBox.Show("Elegir la categoría del artículo.");
+                MessageBox.Show("Elegir la categoría del artículo.", "Error");
                 return;
             }
             else
@@ -101,7 +102,7 @@ namespace Presentacion
             */
             if (txtDesc.Text == "")
             {
-                MessageBox.Show("Se necesita una descripción para el artículo.");
+                MessageBox.Show("Se necesita una descripción para el artículo.", "Error");
                 return;
             }
             else
@@ -114,18 +115,11 @@ namespace Presentacion
             }
             catch
             {
-                MessageBox.Show("El valor seleccionado como precio no es un número válido.");
+                MessageBox.Show("El valor seleccionado como precio no es un número válido.", "Error");
                 return;
             }
-            if (txtUrl.Text == "")
-            {
-                MessageBox.Show("Se debe indicar una imagen de Internet.");
-                return;
-            }
-            else
-            {
-                articulo.UrlImagen = txtUrl.Text;
-            }
+
+            articulo.UrlImagen = txtUrl.Text;
 
             //MarcaNegocio marcaNegocio = new MarcaNegocio();
 
