@@ -115,5 +115,12 @@ namespace Presentacion
                 cargarArticulos();
             }
         }
+
+        private void bDetalle_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            formArticulo detalle = new formArticulo(seleccionado, true);
+            detalle.ShowDialog();
+        }
     }
 }

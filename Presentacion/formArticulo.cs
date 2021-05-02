@@ -15,6 +15,7 @@ namespace Presentacion
     public partial class formArticulo : Form
     {
         private Articulo articulo = null;
+        private bool detalle = false;
         public formArticulo()
         {
             InitializeComponent();
@@ -29,6 +30,14 @@ namespace Presentacion
             InitializeComponent();
             this.articulo = articulo;
             Text = "Modificar Artículo";
+        }
+        public formArticulo(Articulo articulo, bool detalle)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            Text = "Detalle Articulo";
+            this.detalle = detalle;
+
         }
         private void formArticulo_Load(object sender, EventArgs e)
         {
@@ -46,7 +55,7 @@ namespace Presentacion
                     txtUrl.Text = articulo.UrlImagen;
                     
                     txtPrecio.Text = articulo.Precio.ToString();
-
+                    pbFormArt.Load(articulo.UrlImagen);
                 }
             }
             catch (Exception ex)
@@ -54,6 +63,7 @@ namespace Presentacion
 
                 MessageBox.Show(ex.ToString(), "Error al cargar los artículos");
             }
+            desBloquear();
         }
 
         private void bCancelar_Click(object sender, EventArgs e)
@@ -167,6 +177,12 @@ namespace Presentacion
                     Close();
                 }
             }
+        }
+        private void desBloquear()
+        {
+            gbxArticulo.Enabled = !detalle;
+            bAceptar.Visible = !detalle;
+            bCancelar.Visible = !detalle;
         }
     }
 }
