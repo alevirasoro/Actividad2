@@ -140,7 +140,7 @@ namespace Presentacion
                 try
                 {
                     artNegocio.agregar(articulo);
-                    MessageBox.Show("Se ha agregado el artículo al catálogo.");
+                    MessageBox.Show("Se ha agregado el artículo al catálogo.", "Mensaje");
                 }
                 catch (Exception)
                 {
@@ -156,7 +156,7 @@ namespace Presentacion
                 try
                 {
                     artNegocio.editar(articulo);
-                    MessageBox.Show("Se ha modificado el artículo en el catálogo.");
+                    MessageBox.Show("Se ha modificado el artículo en el catálogo.", "Mensaje");
                 }
                 catch (Exception ex)
                 {
