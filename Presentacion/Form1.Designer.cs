@@ -51,23 +51,23 @@ namespace Presentacion
             this.dgvArticulos.ReadOnly = true;
             this.dgvArticulos.RowHeadersWidth = 51;
             this.dgvArticulos.RowTemplate.Height = 25;
-            this.dgvArticulos.Size = new System.Drawing.Size(771, 380);
+            this.dgvArticulos.Size = new System.Drawing.Size(1031, 294);
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvArticulos_MouseClick);
             // 
             // pbArticulo
             // 
-            this.pbArticulo.Location = new System.Drawing.Point(789, 11);
+            this.pbArticulo.Location = new System.Drawing.Point(12, 350);
             this.pbArticulo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbArticulo.Name = "pbArticulo";
-            this.pbArticulo.Size = new System.Drawing.Size(306, 417);
+            this.pbArticulo.Size = new System.Drawing.Size(1031, 333);
             this.pbArticulo.TabIndex = 1;
             this.pbArticulo.TabStop = false;
             // 
             // lFiltro
             // 
             this.lFiltro.AutoSize = true;
-            this.lFiltro.Location = new System.Drawing.Point(288, 18);
+            this.lFiltro.Location = new System.Drawing.Point(548, 16);
             this.lFiltro.Name = "lFiltro";
             this.lFiltro.Size = new System.Drawing.Size(106, 20);
             this.lFiltro.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace Presentacion
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(400, 13);
+            this.txtFiltro.Location = new System.Drawing.Point(660, 13);
             this.txtFiltro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(383, 27);
@@ -118,7 +118,7 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1107, 440);
+            this.ClientSize = new System.Drawing.Size(1055, 696);
             this.Controls.Add(this.bEliminar);
             this.Controls.Add(this.bEditar);
             this.Controls.Add(this.bAgregar);

@@ -19,6 +19,8 @@ namespace Presentacion
         public Gestor()
         {
             InitializeComponent();
+
+            pbArticulo.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void Form1_Load(object sender, EventArgs e)
