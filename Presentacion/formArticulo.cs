@@ -18,12 +18,16 @@ namespace Presentacion
         public formArticulo()
         {
             InitializeComponent();
+
+            Text = "Agregar Artículo";
+
+            txtCodigo.Enabled = true;
         }
         public formArticulo(Articulo articulo)
         {
             InitializeComponent();
             this.articulo = articulo;
-            Text = "Modificar Articulo";
+            Text = "Modificar Artículo";
         }
         private void formArticulo_Load(object sender, EventArgs e)
         {
@@ -35,9 +39,11 @@ namespace Presentacion
                // cboMarca.ValueMember;
                 if(articulo != null)
                 {
+                    txtCodigo.Text = articulo.CodigoArticulo;
                     txtNombre.Text = articulo.Nombre;
                     txtDesc.Text = articulo.Descripcion;
                     txtUrl.Text = articulo.UrlImagen;
+                    
                   //  txtPrecio = articulo.Precio;
 
                 }
