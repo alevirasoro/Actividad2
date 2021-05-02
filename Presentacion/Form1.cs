@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +24,7 @@ namespace Presentacion
         private void Form1_Load(object sender, EventArgs e)
         {
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
-            
+
             try
             {
                 listaArticulos = articuloNegocio.listar();
@@ -71,11 +71,14 @@ namespace Presentacion
             editar.ShowDialog();
         }
 
-        private void bBuscar_Click(object sender, EventArgs e)
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
         {
+            string texto = txtFiltro.Text.ToLower();
+
             if (txtFiltro.Text != "")
             {
-                List<Articulo> listaFiltrada = listaArticulos.FindAll(X => X.Nombre == txtFiltro.Text);
+                List<Articulo> listaFiltrada = listaArticulos.FindAll(
+                    X => X.Nombre.ToLower().Contains(texto));
                 dgvArticulos.DataSource = null;
                 dgvArticulos.DataSource = listaFiltrada;
             }
