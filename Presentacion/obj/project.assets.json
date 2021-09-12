@@ -491,11 +491,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Presentacion\\Presentacion.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Presentacion\\Presentacion.csproj",
       "projectName": "Presentacion",
-      "projectPath": "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Presentacion\\Presentacion.csproj",
+      "projectPath": "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Presentacion\\Presentacion.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Presentacion\\obj\\",
+      "outputPath": "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Presentacion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -512,8 +512,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Negocio\\Negocio.csproj": {
-              "projectPath": "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Negocio\\Negocio.csproj"
+            "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Negocio\\Negocio.csproj": {
+              "projectPath": "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Negocio\\Negocio.csproj"
             }
           }
         }

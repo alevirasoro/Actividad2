@@ -15,9 +15,8 @@ namespace Negocio
             AccesoDB acceso = new AccesoDB();
             try
             {
-                string valores = "values('"+ nuevo.CodigoArticulo + "', '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', '" + nuevo.UrlImagen + "','" + nuevo.Precio + "', 1, 1)";
+                string valores = "values('"+ nuevo.CodigoArticulo + "', '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', '" + nuevo.UrlImagen + "',' "+ nuevo.Precio + "', 1, 1)";
                 acceso.setearConsulta("insert into articulos (Codigo, Nombre, Descripcion, ImagenUrl, Precio, IdMarca, IdCategoria) " + valores);
-
                 acceso.ejecutarAccion();
             }
             catch (Exception ex)

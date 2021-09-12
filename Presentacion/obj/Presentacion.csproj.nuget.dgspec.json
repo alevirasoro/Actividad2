@@ -1,29 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Presentacion\\Presentacion.csproj": {}
+    "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Presentacion\\Presentacion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Dominio\\Dominio.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Dominio\\Dominio.csproj"
+        "projectPath": "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Dominio\\Dominio.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Negocio\\Negocio.csproj": {
+    "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Negocio\\Negocio.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Negocio\\Negocio.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Negocio\\Negocio.csproj",
         "projectName": "Negocio",
-        "projectPath": "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Negocio\\Negocio.csproj",
+        "projectPath": "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Negocio\\Negocio.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Dominio\\Dominio.csproj"
+              "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -33,14 +33,14 @@
         "net472": {}
       }
     },
-    "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Presentacion\\Presentacion.csproj": {
+    "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Presentacion\\Presentacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Presentacion\\Presentacion.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Presentacion\\Presentacion.csproj",
         "projectName": "Presentacion",
-        "projectPath": "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Presentacion\\Presentacion.csproj",
+        "projectPath": "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Presentacion\\Presentacion.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Presentacion\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Presentacion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,8 +57,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Negocio\\Negocio.csproj": {
-                "projectPath": "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Negocio\\Negocio.csproj"
+              "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Negocio\\Negocio.csproj": {
+                "projectPath": "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Negocio\\Negocio.csproj"
               }
             }
           }

@@ -46,6 +46,7 @@ namespace Negocio
             conexion.Open();
             comando.ExecuteNonQuery();
         }
+
         public SqlDataReader Lector
         {
             get { return lector; }

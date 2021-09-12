@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rYWVf/qmv2UPHUeZ5dDMENa4P1b9TJZGK7XNU5yD+mvWYAu6al2H3/1wEvEhuG8dYwQjF7OYggVjCqnlQkYzPw==",
+  "dgSpecHash": "KNnCxJyoX3+Oj5QO3zyrJosx9iQ/W35MICdJUGeQ+bz6HiEZhONOiO//76Jc0d8f02fhdYtUeHeDhoyRDrw25Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Desktop\\pruebasolucion\\Actividad2-master\\Presentacion\\Presentacion.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\programacion\\pruebasolucion\\Actividad2-master\\Presentacion\\Presentacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
